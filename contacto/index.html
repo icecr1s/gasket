@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y FAQ - burlete.cl | Burletes para equipos de frío</title>
+
+  <link rel="icon" type="image/png" href="/img/logo.png">
+  
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+        body { font-family: 'Work Sans', sans-serif; background-color: #f8fafc; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="w-full text-slate-800">
+
+  <nav class="bg-white/95 backdrop-blur-md fixed w-full z-50 top-0 shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="/" class="flex-shrink-0 flex items-center font-bold text-2xl" style="color: rgb(0, 86, 179);">
+          burlete.cl
+        </a>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+          <a href="/productos/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Nuestros Productos</a>
+          <a href="/contacto/" class="text-blue-600 font-bold border-b-2 border-blue-600 transition-colors">Contacto y FAQ</a>
+        </div>
+        
+        <div class="hidden md:flex">
+          <a href="https://wa.me/56923948323" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-sm">
+            Cotizar
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-slate-800 hover:text-blue-600 focus:outline-none p-2">
+            <i data-lucide="menu" id="icon-menu" class="w-7 h-7 block"></i>
+            <i data-lucide="x" id="icon-close" class="w-7 h-7 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
+      <div class="px-4 pt-4 pb-6 space-y-3 flex flex-col">
+        <a href="/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Inicio</a>
+        <a href="/productos/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Nuestros Productos</a>
+        <a href="/contacto/" class="block px-3 py-3 text-lg font-bold text-blue-600 bg-blue-50 rounded-lg">Contacto y FAQ</a>
+        <a href="https://wa.me/56923948323" target="_blank" class="block mt-4 text-center bg-blue-600 text-white px-4 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md">
+          Cotizar ahora
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <a href="https://wa.me/56923948323?text=Hola,%20necesito%20cotizar%20un%20burlete%20industrial" 
+     class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all z-50 flex items-center justify-center"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+     <i data-lucide="message-circle" class="w-8 h-8"></i>
+  </a>
+
+  <div class="pt-16"></div> 
+  <main class="w-full">
+    <section class="py-20 px-6 md:px-12 fade-in">
+      <h2 class="text-center font-bold mb-10 text-3xl" style="color: rgb(0, 86, 179);">🧾 Preguntas Frecuentes</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <h4 class="font-bold mb-2 text-lg text-slate-800">¿Fabrican burletes a medida?</h4>
+          <p class="text-gray-600">Sí, fabricamos según las dimensiones y especificaciones que necesite su equipo.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <h4 class="font-bold mb-2 text-lg text-slate-800">¿Despachan a regiones?</h4>
+          <p class="text-gray-600">Sí, enviamos a todo Chile.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <h4 class="font-bold mb-2 text-lg text-slate-800">¿Pueden fabricar modelos especiales?</h4>
+          <p class="text-gray-600">Sí, podemos replicar o diseñar perfiles según muestra o plano técnico.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-20 px-6 md:px-12 fade-in">
+      <div class="max-w-3xl mx-auto rounded-2xl p-10 text-center shadow-lg" style="background: linear-gradient(135deg, rgb(0, 61, 130), rgb(0, 104, 214));">
+        <h3 class="font-bold mb-4 text-white text-2xl">📞 Contacto</h3>
+        <p class="mb-8 opacity-90 text-white text-lg">¿Necesita cotizar o solicitar un modelo específico? Estamos listos para ayudarle.</p>
+        
+        <p class="mb-4 text-white font-semibold text-xl">
+          WhatsApp: 
+          <a href="https://wa.me/56923948323?text=Hola,%20necesito%20cotizar%20un%20burlete" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="hover:text-green-300 hover:underline transition-colors duration-200 ml-2">
+            +56 9 2394 8323
+          </a>
+        </p>
+        
+        <p class="mb-4 text-white font-semibold text-xl">
+          Email: 
+          <a href="mailto:operaciones.bai@outlook.com" 
+             class="hover:text-blue-200 hover:underline transition-colors duration-200 ml-2">
+            operaciones.bai@outlook.com
+          </a>
+        </p>
+        
+        <p class="opacity-80 text-white mt-8 pt-6 border-t border-white/20">Horario de atención: Lunes a viernes, 9:00 a 18:00 hrs.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 py-6 text-center">
+    <p class="text-gray-400">© 2026 burlete.cl - Fábrica de burletes para equipos de frío en Chile. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+        lucide.createIcons();
+        
+        // Lógica del menú desplegable móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        if (btn) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                iconMenu.classList.toggle('hidden');
+                iconMenu.classList.toggle('block');
+                iconClose.classList.toggle('hidden');
+                iconClose.classList.toggle('block');
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

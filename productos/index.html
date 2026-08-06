@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - burlete.cl | Burletes para equipos de frío</title>
+
+  <link rel="icon" type="image/png" href="/img/logo.png">
+  
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+        body { font-family: 'Work Sans', sans-serif; background-color: #ffffff; }
+        .producto-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .producto-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,86,179,0.15); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .marca-badge { transition: transform 0.2s, box-shadow 0.2s; }
+        .marca-badge:hover { transform: scale(1.05); box-shadow: 0 6px 15px rgba(0,0,0,0.08); }
+        .logo-img { filter: grayscale(100%) opacity(70%); transition: filter 0.3s ease, opacity 0.3s ease; }
+        .marca-badge:hover .logo-img { filter: grayscale(0%) opacity(100%); }
+  </style>
+</head>
+<body class="w-full text-slate-800">
+
+  <nav class="bg-white/95 backdrop-blur-md fixed w-full z-50 top-0 shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="/" class="flex-shrink-0 flex items-center font-bold text-2xl" style="color: rgb(0, 86, 179);">
+          burlete.cl
+        </a>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+          <a href="/productos/" class="text-blue-600 font-bold border-b-2 border-blue-600 transition-colors">Nuestros Productos</a>
+          <a href="/contacto/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Contacto y FAQ</a>
+        </div>
+        
+        <div class="hidden md:flex">
+          <a href="https://wa.me/56923948323" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-sm">
+            Cotizar
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-slate-800 hover:text-blue-600 focus:outline-none p-2">
+            <i data-lucide="menu" id="icon-menu" class="w-7 h-7 block"></i>
+            <i data-lucide="x" id="icon-close" class="w-7 h-7 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
+      <div class="px-4 pt-4 pb-6 space-y-3 flex flex-col">
+        <a href="/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Inicio</a>
+        <a href="/productos/" class="block px-3 py-3 text-lg font-bold text-blue-600 bg-blue-50 rounded-lg">Nuestros Productos</a>
+        <a href="/contacto/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Contacto y FAQ</a>
+        <a href="https://wa.me/56923948323" target="_blank" class="block mt-4 text-center bg-blue-600 text-white px-4 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md">
+          Cotizar ahora
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <a href="https://wa.me/56923948323?text=Hola,%20necesito%20cotizar%20un%20burlete%20industrial" 
+     class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all z-50 flex items-center justify-center"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+     <i data-lucide="message-circle" class="w-8 h-8"></i>
+  </a>
+
+  <div class="pt-16"></div> 
+  <main class="w-full">
+    <section class="py-20 px-6 md:px-12 max-w-7xl mx-auto fade-in">
+      <h2 class="text-center font-bold mb-4 text-3xl" style="color: rgb(0, 86, 179);">🔧 Nuestros Productos</h2>
+      <p class="text-center max-w-3xl mx-auto mb-12 text-gray-600">
+        Fabricamos burletes en diferentes perfiles, densidades y materiales según la necesidad de cada cliente. Trabajamos con estándares de calidad que aseguran durabilidad y resistencia térmica.
+      </p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI004.jpg" alt="Burlete BAI 004 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BOCETOBAI004.jpg" alt="Burlete BAI 004 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 004</h3>
+            <p class="text-sm text-gray-600">Burlete industrial fabricado a medida, diseñado para ofrecer un sellado óptimo y prolongar la vida útil de su equipo.</p>
+          </div>
+        </div>
+
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI022.jpg" alt="Burlete BAI 022 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BOCETOBAI022.jpg" alt="Burlete BAI 022 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 022</h3>
+            <p class="text-sm text-gray-600">Perfil de alta calidad y durabilidad, fabricado bajo estándares exigentes para uso industrial.</p>
+          </div>
+        </div>
+
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI087.jpg" alt="Burlete BAI 087 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BOCETOBAI087.jpg" alt="Burlete BAI 087 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 087</h3>
+            <p class="text-sm text-gray-600">Solución de sellado confiable, adaptable a diferentes equipos y condiciones de trabajo continuo.</p>
+          </div>
+        </div>
+
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI546.jpg" alt="Burlete BAI 546 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BOCETOBAI546.jpg" alt="Burlete BAI 546 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 546</h3>
+            <p class="text-sm text-gray-600">Burlete de alta resistencia, ideal para maquinaria industrial y equipos que requieren sellado firme y estable.</p>
+          </div>
+        </div>
+
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI554.jpg" alt="Burlete BAI 554 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BOCETOBAI554.jpg" alt="Burlete BAI 554 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 554</h3>
+            <p class="text-sm text-gray-600">Perfil versátil, recomendado para puertas, cámaras, hornos y sistemas que necesitan aislamiento térmico.</p>
+          </div>
+        </div>
+
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI2053.jpg" alt="Burlete BAI 2053 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BOCETOBAI2053.jpg" alt="Burlete BAI 2053 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 2053</h3>
+            <p class="text-sm text-gray-600">Modelo diseñado para aplicaciones donde se requiere flexibilidad y sellado hermético en espacios reducidos.</p>
+          </div>
+        </div>
+
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI3108.jpg" alt="Burlete BAI 3108 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BOCETOBAI3108.jpg" alt="Burlete BAI 3108 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 3108</h3>
+            <p class="text-sm text-gray-600">Burlete especializado, enfocado en mantener la continuidad operativa con materiales de alta resistencia.</p>
+          </div>
+        </div>
+
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI2061.jpg" alt="Burlete BAI 2061 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI2061.jpg" alt="Burlete BAI 2061 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 2061</h3>
+            <p class="text-sm text-gray-600">Diseño eficiente para asegurar el cierre hermético y la protección de su maquinaria industrial.</p>
+          </div>
+        </div>
+
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="aspect-square relative overflow-hidden group bg-slate-50">
+            <div class="slider-track flex w-full h-full transition-transform duration-300">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI2726.jpg" alt="Burlete BAI 2726 - Vista 1">
+              <img class="product-img min-w-full h-full object-cover cursor-zoom-in" loading="lazy" src="/img/BAI2726.jpg" alt="Burlete BAI 2726 - Vista 2">
+            </div>
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity z-10"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-10">
+              <span class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors"></span>
+              <span class="dot w-2 h-2 rounded-full bg-white/70 transition-colors"></span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 2726</h3>
+            <p class="text-sm text-gray-600">Perfil técnico desarrollado a medida para satisfacer las necesidades de aislamiento y seguridad térmica.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-16 text-center p-8 bg-slate-50 rounded-2xl fade-in border border-slate-200">
+        <h3 class="font-bold mb-2 text-xl" style="color: rgb(0, 86, 179);">Compatibilidad de Marcas</h3>
+        <p class="mb-6 text-gray-600"><em>Consulte sobre más modelos; tenemos compatibilidad con las siguientes marcas de equipos de frío:</em></p>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/true.png" alt="Logo TRUE" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/kolpak.png" alt="Logo KOLPAK" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/delfield.png" alt="Logo Delfield" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/traulsen.png" alt="Logo Traulsen" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/hennypenny.png" alt="Logo Henny Penny" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/turboair.png" alt="Logo Turbo air" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/maigas.png" alt="Logo MAIGAS" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/mccall.png" alt="Logo MCCALL" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/oppici.png" alt="Logo OPPICI" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/beverage-air.png" alt="Logo BEVERAGE-AIR" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/ventus.png" alt="Logo VENTUS" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="/img/biggi.png" alt="Logo BIGGI" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 py-6 text-center">
+    <p class="text-gray-400">© 2026 burlete.cl - Fábrica de burletes para equipos de frío en Chile. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="imageModal" class="fixed inset-0 bg-black/90 z-[60] hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 cursor-zoom-out">
+    <button id="closeModal" class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors bg-black/40 p-2 rounded-full" aria-label="Cerrar imagen">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <img id="modalTargetImg" src="" alt="Imagen ampliada del producto" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
+  </div>
+
+  <script>
+        lucide.createIcons();
+        
+        // Lógica del menú desplegable móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        if (btn) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                iconMenu.classList.toggle('hidden');
+                iconMenu.classList.toggle('block');
+                iconClose.classList.toggle('hidden');
+                iconClose.classList.toggle('block');
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Slider
+        document.querySelectorAll('.producto-card').forEach(card => {
+            const track = card.querySelector('.slider-track');
+            if (!track) return;
+            const prevBtn = card.querySelector('.prev-btn');
+            const nextBtn = card.querySelector('.next-btn');
+            const dots = card.querySelectorAll('.dot');
+            const totalSlides = track.children.length;
+            let currentIndex = 0;
+
+            const updateSlider = () => {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.replace('bg-white/70', 'bg-blue-600');
+                    } else {
+                        dot.classList.replace('bg-blue-600', 'bg-white/70');
+                    }
+                });
+            };
+            if (nextBtn) {
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateSlider();
+                });
+            }
+            if (prevBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateSlider();
+                });
+            }
+        });
+
+        // Modal (Lightbox)
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalTargetImg');
+        const closeBtn = document.getElementById('closeModal');
+        const productImages = document.querySelectorAll('.product-img');
+
+        productImages.forEach(img => {
+            img.addEventListener('click', (e) => {
+                modalImg.src = e.target.src;
+                modalImg.alt = e.target.alt;
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalImg.classList.remove('scale-95');
+                }, 10);
+            });
+        });
+
+        const hideModal = () => {
+            modal.classList.add('opacity-0');
+            modalImg.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImg.src = '';
+            }, 300);
+        };
+
+        closeBtn.addEventListener('click', hideModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target !== modalImg && e.target !== closeBtn) hideModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) hideModal();
+        });
+  </script>
+</body>
+</html>
