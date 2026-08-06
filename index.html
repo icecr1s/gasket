@@ -3,18 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto y FAQ - burlete.cl | Burletes para equipos de frío</title>
+  <title>Inicio - burlete.cl | Burletes para equipos de frío</title>
 
-  <link rel="icon" type="image/png" href="/img/logo.png">
+  <link rel="icon" type="image/png" href="img/logo.png">
   
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   
   <style>
-        body { font-family: 'Work Sans', sans-serif; background-color: #f8fafc; }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        body { font-family: 'Work Sans', sans-serif; background-color: #ffffff; }
+        .hero-section {
+            position: relative;
+            min-height: calc(70 * min(var(--vh, 1vh), 1vh));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,40,90,0.85), rgba(0,86,179,0.7));
+            z-index: 1;
+        }
+        .hero-section img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem; }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .benefit-item {
+            transition: background 0.3s, transform 0.3s;
+        }
+        .benefit-item:hover {
+            background: #d6e4ff;
+            transform: translateX(4px);
+        }
+        .marca-badge {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .marca-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+        .logo-img {
+            filter: grayscale(100%) opacity(70%);
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+        .marca-badge:hover .logo-img {
+            filter: grayscale(0%) opacity(100%);
+        }
   </style>
 </head>
 <body class="w-full text-slate-800">
@@ -27,9 +78,9 @@
         </a>
         
         <div class="hidden md:flex space-x-8">
-          <a href="/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+          <a href="/" class="text-blue-600 font-bold border-b-2 border-blue-600 transition-colors">Inicio</a>
           <a href="/productos/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Nuestros Productos</a>
-          <a href="/contacto/" class="text-blue-600 font-bold border-b-2 border-blue-600 transition-colors">Contacto y FAQ</a>
+          <a href="/contacto/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Contacto y FAQ</a>
         </div>
         
         <div class="hidden md:flex">
@@ -49,9 +100,9 @@
 
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
       <div class="px-4 pt-4 pb-6 space-y-3 flex flex-col">
-        <a href="/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Inicio</a>
+        <a href="/" class="block px-3 py-3 text-lg font-bold text-blue-600 bg-blue-50 rounded-lg">Inicio</a>
         <a href="/productos/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Nuestros Productos</a>
-        <a href="/contacto/" class="block px-3 py-3 text-lg font-bold text-blue-600 bg-blue-50 rounded-lg">Contacto y FAQ</a>
+        <a href="/contacto/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Contacto y FAQ</a>
         <a href="https://wa.me/56923948323" target="_blank" class="block mt-4 text-center bg-blue-600 text-white px-4 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md">
           Cotizar ahora
         </a>
@@ -67,49 +118,90 @@
   </a>
 
   <div class="pt-16"></div> 
+  <header class="hero-section">
+    <img loading="lazy" src="https://images.pexels.com/photos/14804699/pexels-photo-14804699.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Instalaciones industriales con maquinaria para manufactura">
+    <div class="hero-content max-w-3xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white">burlete.cl</h1>
+      <p class="text-xl md:text-2xl mb-8 opacity-90 text-white">Fábrica de burletes para equipos de frío en Chile</p>
+      <p class="text-base md:text-lg leading-relaxed opacity-90 max-w-2xl mx-auto text-white mb-8">
+        Somos especialistas en la fabricación de burletes industriales de alta resistencia, diseñados para garantizar sellado, seguridad y continuidad operativa. Fabricamos bajo pedido y despachamos a todo Chile.
+      </p>
+      <a href="https://wa.me/56923948323?text=Hola,%20necesito%20cotizar%20un%20burlete%20industrial" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-blue-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-50 transition-colors">
+        Cotizar ahora
+      </a>
+    </div>
+  </header>
+
   <main class="w-full">
-    <section class="py-20 px-6 md:px-12 fade-in">
-      <h2 class="text-center font-bold mb-10 text-3xl" style="color: rgb(0, 86, 179);">🧾 Preguntas Frecuentes</h2>
-      <div class="max-w-3xl mx-auto space-y-6">
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-          <h4 class="font-bold mb-2 text-lg text-slate-800">¿Fabrican burletes a medida?</h4>
-          <p class="text-gray-600">Sí, fabricamos según las dimensiones y especificaciones que necesite su equipo.</p>
+    <section class="py-20 px-6 md:px-12 bg-white fade-in">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="text-center">
+          <img src="/img/burlete.png" alt="Ejemplo de burlete en cooler instalado" class="w-full h-auto rounded-xl shadow-md border border-slate-100 object-cover">
+          <p class="mt-4 text-sm text-gray-600 font-medium">Vista detallada de una instalación típica de un burlete.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-          <h4 class="font-bold mb-2 text-lg text-slate-800">¿Despachan a regiones?</h4>
-          <p class="text-gray-600">Sí, enviamos a todo Chile.</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-          <h4 class="font-bold mb-2 text-lg text-slate-800">¿Pueden fabricar modelos especiales?</h4>
-          <p class="text-gray-600">Sí, podemos replicar o diseñar perfiles según muestra o plano técnico.</p>
+        
+        <div>
+          <h2 class="font-bold mb-6 text-left text-2xl" style="color: rgb(0, 86, 179);">Por qué elegirnos</h2>
+          <div class="flex flex-col gap-4">
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Fabricación bajo pedido según especificaciones técnicas</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Despacho a todo Chile</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Materiales de alta calidad</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Entrega rápida y confiable</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Asesoría técnica personalizada</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Modelos estándar y fabricación especial</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="pb-20 px-6 md:px-12 fade-in">
-      <div class="max-w-3xl mx-auto rounded-2xl p-10 text-center shadow-lg" style="background: linear-gradient(135deg, rgb(0, 61, 130), rgb(0, 104, 214));">
-        <h3 class="font-bold mb-4 text-white text-2xl">📞 Contacto</h3>
-        <p class="mb-8 opacity-90 text-white text-lg">¿Necesita cotizar o solicitar un modelo específico? Estamos listos para ayudarle.</p>
-        
-        <p class="mb-4 text-white font-semibold text-xl">
-          WhatsApp: 
-          <a href="https://wa.me/56923948323?text=Hola,%20necesito%20cotizar%20un%20burlete" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="hover:text-green-300 hover:underline transition-colors duration-200 ml-2">
-            +56 9 2394 8323
-          </a>
-        </p>
-        
-        <p class="mb-4 text-white font-semibold text-xl">
-          Email: 
-          <a href="mailto:operaciones.bai@outlook.com" 
-             class="hover:text-blue-200 hover:underline transition-colors duration-200 ml-2">
-            operaciones.bai@outlook.com
-          </a>
-        </p>
-        
-        <p class="opacity-80 text-white mt-8 pt-6 border-t border-white/20">Horario de atención: Lunes a viernes, 9:00 a 18:00 hrs.</p>
+    <section class="py-20 px-6 md:px-12 bg-slate-50 fade-in border-t border-slate-200">
+      <h2 class="text-center font-bold mb-10 text-2xl" style="color: rgb(0, 86, 179);">Nuestros Clientes</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/mc.png" alt="Logo McDonald's" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/bk.png" alt="Logo Burger King" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/starbucks.png" alt="Logo Starbucks" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/chilis.png" alt="Logo Chili's" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/mamut.png" alt="Logo Mamut" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/juanmaestro.png" alt="Logo Juan Maestro" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/tommybeans.png" alt="Logo Tommy Beans" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/pf.png" alt="Logo P.F. Chang's" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="/img/doggis.png" alt="Logo Doggis" class="logo-img max-h-full max-w-full object-contain">
+        </div>
       </div>
     </section>
   </main>
